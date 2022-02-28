@@ -1,9 +1,14 @@
-console.log ("Hello JavaScript")
-
-const myName="Evgeniy N"
-
-console.log(myName)
-
-console.log("Мы веном")
-
-console.log("Дороу")
+console.log("Hello JavaScript");
+const ourPlanetName = "Earth";
+let currentTime = "19.10";
+let topicNumber = 3;
+let isCashPayment = "true";
+const myName = "Evgenii";
+const mySurname = "N";
+console.log(myName);
+console.log(ourPlanetName);
+console.log(currentTime);
+console.log(topicNumber);
+console.log(isCashPayment);
+console.log(myName);
+console.log(mySurname);
