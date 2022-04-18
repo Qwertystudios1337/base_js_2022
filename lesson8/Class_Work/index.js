@@ -174,12 +174,163 @@
 // };
 // console.log(getCommonElements(myArr1, myArr2));
 
+// console.log(this);
+
+// const myObject = {
+//     name: "Vasya",
+//     context: this,
+// callName: function () {
+//     console.log(this);
+//     console.log(this.name);
+// },
+// };
+
+// console.log(myObject.context);
 
 
+// const newObject = {
+//     name: 'Petya',
+//     obj: myObject,
+// };
+
+// newObject.obj.callName();
+
+// const city = {
+//     name: "Kiev",
+//     population: 2000000,
+//     showName: function () {
+//         console.log(this.name);
+//     },
+//     showPopulation: function () {
+//         console.log(this.population);
+//     },
+
+// changeKeyValue: function (key, newValue) {
+//     switch(key) {
+//         case 'name':
+//             this.name = newValue;
+//             return;
+//             case 'population':
+//                 this.population = newValue;
+//                 return;
+//             default:
+//                 console.log("Ключ не найден");
+//                 return;
+//     }
+// },
+// };
+
+// city.changeKeyValue('population', 2222);
+
+// console.log(city);
+
+// const myObject = {
+//     name: "Vasya",
+// callName: function () {
+//     console.log(this.name);
+// },
+// };
+
+// const newObject = {
+//     name:'Petya',
+// };
+
+// myObject.callName.call(newObject);
 
 
+// const say = function (phrase) {
+//     console.log(`${this.name}:${phrase}`);
+// };
+// const myObject = {
+//     name: "Vasya",
+// };
+
+// const newObject = {
+//     name: "Petya",
+// };
+
+// say.call(myObject, "Привет");
+// say.call(newObject, "И тебе привет!");
+
+// newObject.obj.callName();
+
+// const city = {
+//     name: "Kiev",
+//     population: 2000000,
+//     showName: function () {
+//         console.log(this.name);
+//     },
+//     showPopulation: function () {
+//         console.log(this.population);
+//     },
+
+// changeKeyValue: function (key, newValue) {
+//     switch(key) {
+//         case 'name':
+//             this.name = newValue;
+//             return;
+//             case 'population':
+//                 this.population = newValue;
+//                 return;
+//             default:
+//                 console.log("Ключ не найден");
+//                 return;
+//     }
+// },
+// };
+
+// const newCity = {
+//     name: "NN",
+//     population: 1500000,
+//   };
+  
+//   city.showName.call(newCity);
+//   city.showPopulation.call(newCity);
+//   city.changeKeyValue.call(newCity, "name", "NY");
+//   city.changeKeyValue.apply(newCity, ["population", 5000]);
+  
+//   const boundFunc = city.changeKeyValue.bind(newCity, "name", "LA");
+//   boundFunc();
+  
+//   console.log(newCity);
 
 
+//   Замыкание
 
+// const myFunc =() => {
+//     const myVar=5;
 
+//     return (param) => {
+//         console.log(myVar+param);
+//     };
+// };
 
+// myFunc()(10);
+
+// Каррирование 
+// const myFunc = (a) => {
+//     return (b) => {
+//         return (c) => {
+//             return a+b+c;
+//         };
+//     };
+// };
+// console.log(myFunc(2)(3)(10));
+
+// Практика 1
+// const ppVolume =() => {
+//     const h=10;
+
+//     return (a,b) => {
+//         console.log(h*a*b);
+//     };
+// };
+// ppVolume()(2,3);
+
+// Практика 2
+const ppVolume = (h) => {
+    return (a,b) => {
+            return a*b*h;
+        };
+    };
+console.log(ppVolume(2)(3,10));
